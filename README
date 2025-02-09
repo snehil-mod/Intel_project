@@ -1,1 +1,106 @@
+# Image Detection ML Project
 
+This repository contains a Machine Learning project designed to detect and correct pixelated images using convolutional neural networks (CNNs). The project includes scripts for data preprocessing, model training, evaluation, and generating restored images from pixelated inputs. The models were built using Python and TensorFlow/Keras frameworks.
+
+## Project Structure
+
+```
+Intel_project-main/
+├── data_loader.py                # Script to load datasets
+├── detect_pixelated_image.py     # Script to detect pixelated images
+├── evaluate_image_quality.py     # Script to evaluate image quality
+├── evaluate_model.py            # Evaluation of the simple CNN model
+├── evaluate_improved_model.py   # Evaluation of the improved CNN model
+├── generate_restored_images.py  # Generates restored images using the model
+├── improved_cnn_model.py        # Defines the improved CNN architecture
+├── simple_cnn_model.py          # Defines the simple CNN architecture
+├── organizing_data.py           # Organizes data into training/testing sets
+├── orig_to_pixelated.py         # Creates pixelated images from originals
+├── train_improved_model.py      # Trains the improved CNN model
+├── train_model.py               # Trains the simple CNN model
+├── README.md                    # Project documentation
+```
+
+## Prerequisites
+
+- Python 3.7+
+- TensorFlow/Keras
+- NumPy
+- Matplotlib
+- Pandas
+- Scikit-learn
+- PIL (Pillow)
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/snehil-mod/Intel_project.git
+   cd Intel_project-main
+   ```
+2. Install the required Python libraries:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Usage
+
+### 1. Data Preparation
+
+- Use `orig_to_pixelated.py` to generate pixelated versions of your original dataset.
+- Use `organizing_data.py` to split your dataset into training and testing sets.
+
+### 2. Training the Models
+
+- Train the simple CNN model:
+  ```bash
+  python train_model.py
+  ```
+- Train the improved CNN model:
+  ```bash
+  python train_improved_model.py
+  ```
+
+### 3. Evaluating the Models
+
+- Evaluate the simple CNN model:
+  ```bash
+  python evaluate_model.py
+  ```
+- Evaluate the improved CNN model:
+  ```bash
+  python evaluate_improved_model.py
+  ```
+
+### 4. Generating Restored Images
+
+- Use the `generate_restored_images.py` script to restore pixelated images:
+  ```bash
+  python generate_restored_images.py
+  ```
+
+### 5. Additional Features
+
+- Detect pixelated images using:
+  ```bash
+  python detect_pixelated_image.py
+  ```
+- Evaluate image quality metrics using:
+  ```bash
+  python evaluate_image_quality.py
+  ```
+
+## Known Issues
+
+- The accuracy of the models may be low due to insufficient dataset size, inadequate preprocessing, or overly simplistic model architectures.
+- Further hyperparameter tuning and dataset augmentation may improve performance.
+
+## Future Improvements
+
+- Add support for more complex CNN architectures like ResNet or U-Net.
+- Perform dataset augmentation to improve generalization.
+- Include additional evaluation metrics like PSNR, SSIM, and LPIPS.
+
+## Contact
+
+For further queries or contributions, feel free to contact [Snehil Mod](https://github.com/snehil-mod).
